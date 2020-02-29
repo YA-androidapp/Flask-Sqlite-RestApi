@@ -9,6 +9,7 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret key'
 # カレントディレクトリのapp.sqliteを使用
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.sqlite'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # DB設定
 db = SQLAlchemy(app)
